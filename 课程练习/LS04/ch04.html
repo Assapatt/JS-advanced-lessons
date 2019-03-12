@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本（原始）数据类型</title>
+    <script>
+        //基本数据类型，在操作过程中，会有自动装箱过程
+        //生成临时对象，临时对象在使用完成之后会自动释放
+        var num = 10;
+        num.toString();
+        // num.__proto__ == Number.prototype
+        // console.log(num.__proto__);
+        // console.log(Number.prototype);
+        // var num = 10;
+        // var numObject = new Number(num);
+        // numObject.toString();
+
+
+        // num.p = 10;
+        // var t = num.p;
+        // console.log(t);
+
+        // var n1 = 12345.6789;
+        // console.log(n1.toFixed(2));
+        // console.log(n1.toPrecision(2));
+        // console.log(n1.toString());
+        // console.log(n1.toExponential(2));
+
+
+        var str = "abcdefgh";
+        str.charAt(2);
+        // charAt(index) 返回特定索引位置
+        // var str = "abcde"
+        // var strObject = new String(str);
+        // console.log(strObject.charAt(2));
+        // console.log("b".localeCompare("B"));
+        //返回特定索引位置的字符
+        str.charAt(1);
+        //返回特定索引位置的UNicode码
+        str.charCodeAt(1);
+        //slice(截取起始位置,截取结束位置)
+        str.slice(0,3);
+        //substr(截取字符串的起始位置,截取的长度)
+        str.substr(0,3);
+        //substring(截取字符串的起始位置，截取字符串的结束位置)
+        //起始值 > 结束值  则互换位置
+        //如果有超出索引位置 0 - str.length-1  自动截断
+        str.substring(3,0);
+        //split(特定的字符，限定元素个数)将字符串以特定的字符分割并作为数组元素生成数组
+        str.split("e");
+        //trim() 去除字符串两边的空白字符，字符串内部的不去除
+        str.trim();
+        //字符串拼接
+        str.concat("lmn");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
