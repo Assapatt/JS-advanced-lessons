@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS赋值、算数、关系运算符</title>
+    <script>
+        // var a = 45;
+        // if(45 == a){
+        //     console.log("判等")
+        // }
+
+        // var a1 = 10;
+        // var a2 = "10";
+        // if(a1 == a2){
+        //     console.log("先进行隐式转化，再判等");
+        // }
+
+        // if(a1 === a2){
+        //     console.log("先判断类型，类型相同再判断值是否相等")
+        // }
+        
+        // var x = "1";
+        // console.log(++x); //2 注意++和--的隐式类型转换
+        // var y = "1";
+        // console.log(y+=1);//11
+
+        var score = 76;
+        if(score>90){
+            console.log("优");
+        }else if(score>75){
+            console.log("良");
+        }else if(score>60){
+            console.log("及格");
+        }else{
+            console.log("不及格");
+        }
+
+        //通过&&和||的组合实现如上功能，注：小括号优先级最高
+        console.log((score>90&&"优")||(score>75&&"良")||(score>60&&"及格")||"不及格");
+
+        switch (true) {
+            case score>90:
+                console.log("优");
+                break;
+            case score>75:
+                console.log("良");
+                break;
+            case score>60:
+                console.log("及格");
+                break;
+            default:
+                console.log("不及格");
+                break;
+        }
+
+        //ES6中设置函数默认值
+        function sum1(x,y = 2,z = 3){
+            return x + y + z;
+        }
+        sum1(1);
+
+        //通过Function构造函数来实例化得到一个function
+        //Function实例化的函数，执行效率相对较低，但是更加灵活
+        var fn1 = new Function('x','y','return x + y');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
